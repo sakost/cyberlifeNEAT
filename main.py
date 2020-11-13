@@ -5,7 +5,10 @@ import neat
 import re
 import pygame as pg
 
-from game import Game, Cell, GameAction, find_cell, game, pop_size
+from game import Game, Cell, GameAction, find_cell
+
+pop_size = 50
+game = Game(pop_size)
 
 gen = 0
 
