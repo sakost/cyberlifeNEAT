@@ -158,16 +158,6 @@ class Cell(AbstractGameObject):
 
     def tick(self):
         delta = self.HP_PER_TICK
-        # for dx, dy in [(0, 1), (1, 0), (0, -1), (-1, 0), (-1, 1), (1, -1), (-1, -1), (1, 1)]:
-        #     x = self.x + dx
-        #     y = self.y + dy
-        #     cell = find_cell(game, x, y)
-        #     if cell is not None:
-        #         delta = min(delta + 5, -2)
-        #     if 0 <= x < Cell.W and 0 <= y < Cell.H and game.cells_food[y, x].magic:
-        #         delta = 0
-        #         break
-
         self.hp = max(self.hp + delta, Cell.MIN_HP)
 
     def heal(self, count=None):
@@ -214,8 +204,5 @@ class CellFood(AbstractGameObject):
         self.count = min(self.per_tick + self.count, self.max)
 
 
-pop_size = 50
-game = Game(pop_size)
-
 if __name__ == '__main__':
-    game.run()
+    Game(50).run()

@@ -7,7 +7,7 @@ and there are some "alive cells" that can move(not food cells).
 Once a tick alive cells slowly dying(life points are taken away by some constant value).
 Food is growing once a tick on some random value(from 0 to 8).
 Cells can move on 4 direction(top, bottom, left, right) and they **always** eat food cells(up to 40 points).
-Within a group of cells they dying slowly(like a song of Saint Asonia :) )  
+Within a group of cells they dying slowly(like a song of Saint Asonia :) (I removed this feature) )  
 
 ## Run
 * Without virtualenv
